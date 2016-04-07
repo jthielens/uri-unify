@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cleo.labs</groupId>
+    <artifactId>uri-unify</artifactId>
+    <packaging>jar</packaging>
+    <version>5.3.0.0-SNAPSHOT</version>
+    <name>Cleo Labs Unify URI Configuration Stub</name>
+
+    <inceptionYear>2016</inceptionYear>
+
+    <properties>
+        <maven-jar-plugin.version>2.5</maven-jar-plugin.version>
+    </properties>
+
+    <distributionManagement>
+        <!-- Used to deploy artifacts automatically from jenkins -->
+        <repository>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>http://contd.cleo.com/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Snapshots</name>
+            <url>http://contd.cleo.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                    <configuration>
+                        <archive>
+                            <manifestEntries>
+                                <Cleo-URI-Scheme>unify</Cleo-URI-Scheme>
+                                <Cleo-URI-File-Class>com.cleo.unify.uri.UnifyFile</Cleo-URI-File-Class>
+                                <Cleo-URI-InputStream-Class>com.cleo.unify.uri.UnifyInputStream</Cleo-URI-InputStream-Class>
+                                <Cleo-URI-OutputStream-Class>com.cleo.unify.uri.UnifyOutputStream</Cleo-URI-OutputStream-Class>
+                                <Cleo-API-ExtendedUserGroups>com.cleo.lexicom.secureshare.UnifyFtpSftpExtendedHosts</Cleo-API-ExtendedUserGroups>
+                                <Cleo-URI-Additional>this</Cleo-URI-Additional>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
