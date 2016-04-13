@@ -49,7 +49,7 @@
                                 <Cleo-URI-InputStream-Class>com.cleo.unify.uri.UnifyInputStream</Cleo-URI-InputStream-Class>
                                 <Cleo-URI-OutputStream-Class>com.cleo.unify.uri.UnifyOutputStream</Cleo-URI-OutputStream-Class>
                                 <Cleo-API-ExtendedUserGroups>com.cleo.lexicom.secureshare.UnifyFtpSftpExtendedHosts</Cleo-API-ExtendedUserGroups>
-                                <Cleo-URI-Additional>this</Cleo-URI-Additional>
+                                <Cleo-URI-Additional>this lib/uri/UnifyTrustURI.jar</Cleo-URI-Additional>
                             </manifestEntries>
                         </archive>
                     </configuration>
